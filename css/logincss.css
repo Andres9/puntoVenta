@@ -1,0 +1,68 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+body {
+    font-size: 15px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    margin: 0 0 120px;
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: poppins-medium;
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: poppins-regular;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+#nombre {
+    font-family: poppins-medium;
+    font-size: .6rem;
+    display: inline-block;
+    /*color: rgba(127, 179, 240, 1);*/
+    color: #223A4B;
+    max-height: 10%;
+    margin-left: 10%;
+}
+
+#sesion{
+    font-family: poppins-regular;
+    display: block;
+    padding-top: 4em;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #223A4B;
+}
+
+.form-control{
+    padding: 1rem;
+    margin: 1rem;
+    color: #223A4B;
+}
+
+#creditos{
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    height: 120px;
+    color: #FFF;
+    background: #223A4B;
+    padding: 2.5rem;
+    text-align: center;
+}

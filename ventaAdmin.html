@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/diseñoVenta.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <title>ventaAdmin</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <span class="icono"><i class="fa fa-shopping-basket fa-3x" aria-hidden="true"></i></span>
+            <h4>Abarrotes</h4>
+
+        </div>
+
+        <nav class="main-nav">
+            <ul class="main-menu">
+                <li class="main-item"><a class="main-link" href=""><span class="icono"><i class="fa fa-home fa-3x" aria-hidden="true"></i></span> Ventas</a></li>
+                <li class="main-item"><a class="main-link" href=""><span class="icono"><i class="fa fa-users fa-3x" aria-hidden="true"></i></span></i> Clientes</a></li>
+                <li class="main-item"><a class="main-link" href=""><span class="icono"><i class="fa fa-barcode fa-3x" aria-hidden="true"></i></span> Productos</a></li>
+                <li class="main-item"><a class="main-link" href=""><span class="icono"><i class="fa fa-cog fa-3x" aria-hidden="true"></i></span></i> Configuración</a></li>
+                <li class="main-item"><a class="main-link" href=""><span class="icono"><i class="fa fa-calculator fa-3x" aria-hidden="true"></i></span> Corte</a></li>
+            </ul>
+        </nav>
+
+        <div id="user">
+            <a href="">
+                <span class="icono"><i class="fa fa-user fa-3x" aria-hidden="true"></i></span>
+                
+                <h4>Administrador</h4>
+        </a>
+
+        </div>
+
+
+    </header>
+
+
+
+    <section id="venta">
+        <section id="operaciones-venta">
+            <form action="">
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Buscar producto
+                          </a>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-block">
+                                <input type="text" class="busquedas" placeholder="Buscar producto">
+                                <button type="button" class="botonbusqueda btn btn-primary">Buscar</button>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Descripcion</th>
+                                            <th>Precio ventaAdmin</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Cacahuates</td>
+                                            <td>$4.00</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#menu1" aria-expanded="false" aria-controls="collapseTwo">
+                            Menu 1
+                          </a>
+                            </h5>
+                        </div>
+                        <div id="menu1" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="card-block">
+                                Menu 1
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#menu2" aria-expanded="false" aria-controls="collapseThree">
+                            Menu2
+                          </a>
+                            </h5>
+                        </div>
+                        <div id="menu2" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="card-block">
+                                Menu2
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </form>
+        </section>
+
+        <section id="detalles">
+
+            <div id="codigobarras">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="text" class="busquedas" placeholder="Intruduce el codigo de barras">
+                            <button class="botonbusqueda btn btn-primary">Agregar producto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tabla">
+                <h4>Detalles de la venta</h4>
+                <table class="table">
+                    <colgroup>
+                        <col class="col1">
+                        <col class="col2">
+                        <col class="col3">
+                        <col class="col4">
+                        <col class="col5">
+                        <col class="col6">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Código de barras</th>
+                            <th>Descripcion del producto.</th>
+                            <th>Precio venta.</th>
+                            <th>Cantidad</th>
+                            <th>Importe</th>
+                            <th>Existencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>15555555</td>
+                            <td>Coca cola</td>
+                            <td>$15.00</td>
+                            <td>5.00</td>
+                            <td>$75.00</td>
+                            <td>12.00</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div id="cobrar-ticket">
+                <button type="button" id="cobrar" class="btn btn-primary form-control" data-toggle="modal" data-target=".bd-example-modal-lg">Cobrar</button>
+
+
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Cobrar</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                         <span aria-hidden="true">&times;</span>
+                                    </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="formas-pago" class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-7 col-12">
+                                            <div id="etiqueta-informacion">
+                                                <label for="">Total a cobrar</label>
+                                            </div>
+                                            <div id="etiqueta-total">
+                                                <label for="">$19.00</label>
+                                            </div>
+                                            <div id="formas-pago">
+                                                <button type="button" class="btn btn-primary modopago" data-toggle="collapse" data-target="#efectivo" aria-expanded="false"
+                                                    aria-controls="collapseExample"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>Efectivo</button>
+                                                <div class="collapse" id="efectivo">
+                                                    <div class="card card-block">
+                                                        <label for="">Págo con:</label><input type="numeric">
+                                                        <label for="">Su cambio: <span>$100.00</span> </label>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-primary modopago" data-toggle="collapse" data-target="#credito" aria-expanded="false"
+                                                    aria-controls="collapseExample"><i class="fa fa-id-card-o" aria-hidden="true"></i> Credito</button>
+                                                <div class="collapse" id="credito">
+                                                    <div class="card card-block">
+                                                        Credito
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-primary modopago" data-toggle="collapse" data-target="#tarjeta" aria-expanded="false"
+                                                    aria-controls="collapseExample"><i class="fa fa-credit-card" aria-hidden="true"></i> Tarjeta de credito</button>
+                                                <div class="collapse" id="tarjeta">
+                                                    <div class="card card-block">
+                                                        Tarjeta de credito
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 col-12">
+                                            <button type="button" class="btn btn-primary boton-cobrar">Cobrar e imprimir ticket</button>
+                                            <button type="button" class="btn btn-primary boton-cobrar">Cobrar solo registrado la venta</button>
+                                            <button type="button" class="btn btn-primary boton-cobrar">Ingresar notas de la venta</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <label for="">Total de articulos</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="ticket" class="btn btn-success form-control">Reimprimir ultimo ticket</button>
+                <button id="venta-dia" class="btn btn-success form-control">Ventas del día</button>
+
+            </div>
+            <div id="detalles-compra">
+                <div class="venta"><span class="cant">3.00</span> Productos en la venta actual </div>
+                <div class="total">Total: <span class="cant">$75.00</span></div>
+            </div>
+        </section>
+    </section>
+
+</body>
+
+</html>

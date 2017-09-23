@@ -1,0 +1,271 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-size: 15px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: poppins-medium;
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: poppins-regular;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Diseño del header*/
+
+header {
+    background: #001927;
+    max-width: 100%;
+    font-family: poppins-bold;
+    font-size: .7em;
+    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    display: inline-block;
+    background: #000;
+    color: #FFF;
+    text-align: center;
+    padding: 1em 2.5em;
+    text-transform: uppercase;
+}
+
+#user {
+    display: inline-block;
+    text-align: center;
+    color: #FFF;
+    padding: .2em 2em;
+    background: #000;
+}
+
+#user a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.fa-shopping-basket {
+    font-size: 5em;
+    color: white;
+}
+
+
+/*Diseño del menu de opciones*/
+
+.main-nav {
+    display: inline-block;
+}
+
+.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #223a4b;
+}
+
+.main-item {
+    float: left;
+}
+
+.main-link {
+    font-size: 1.3em;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 30px;
+    text-decoration: none;
+}
+
+.main-link:hover {
+    font-size: 1.3em;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    text-decoration: none;
+    font-family: poppins-regular;
+}
+
+.icono {
+    display: block;
+    margin-bottom: .2em;
+}
+
+
+/*Diseño de la zona de venta*/
+
+#venta {
+    color: #000;
+    width: 100%;
+    min-height: 87%;
+    padding-top: .5em;
+}
+
+#operaciones-venta {
+    position: absolute;
+    min-height: 100%;
+    width: 25%;
+    font-size: 1em;
+    font-family: poppins-regular;
+    text-align: center;
+}
+
+.btn-outline-primary {
+    width: 80%;
+    margin: .3em;
+}
+
+
+/*Diseño de la zona de detalles*/
+
+#detalles {
+    position: absolute;
+    width: 75%;
+    margin-left: 25%;
+    min-height: 100%;
+    font-size: 1em;
+    font-family: poppins-regular;
+    text-align: center;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.busquedas {
+    width: 70%;
+    height: 2.9em;
+    border-radius: 5px 0 0 5px;
+    padding: 1.5em 1em;
+    margin: 1em 0 1.5em 0;
+    border: 1px solid #000;
+    font-family: poppins-medium;
+}
+
+.botonbusqueda{
+    border: 0;
+    height: 3em;
+    width: 25%;
+    border-radius: 0 5px 5px 0;
+    margin: .3em 0;
+
+}
+
+#cobrar {
+    width: 40%;
+    font-size: 1em;
+    font-family: poppins-medium;
+    line-height: 2.5em;
+    margin-top: .6em;
+    margin-bottom: .6em;
+}
+
+#ticket {
+    width: 25%;
+    font-size: 1em;
+    font-family: poppins-medium;
+    line-height: 2.5em;
+    margin-top: .6em;
+    margin-bottom: .6em;
+}
+
+#venta-dia{
+    width: 20%;
+}
+
+#cobrar-ticket {
+    width: 100%;
+    position: relative;
+}
+
+#detalles-compra {
+    width: 100%;
+    position: absolute;
+}
+
+.total {
+    font-size: 1.6em;
+    font-family: poppins-medium;
+    display: inline-block;
+    width: 35%;
+    text-align: center;
+}
+
+.venta {
+    font-size: 1.6em;
+    font-family: poppins-medium;
+    display: inline-block;
+    width: 55%;
+    text-align: center;
+}
+
+.cant {
+    font-size: 1.6em;
+    font-family: poppins-bold;
+    bottom: 0;
+}
+
+
+/*Maquetación modal cobrar*/
+
+.modal-content {
+    background: #D7D7D7;
+}
+
+#exampleModalLabel {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: poppins-regular;
+}
+
+#etiqueta-informacion {
+    background: #223a4b;
+    color: #FFF;
+    font-size: 1.5em;
+    padding: .2em;
+    font-family: poppins-medium;
+    text-transform: uppercase;
+}
+
+#etiqueta-total {
+    color: #000;
+    font-size: 2em;
+    font-family: poppins-medium;
+}
+
+.modopago {
+    width: 100%;
+    font-size: 1em;
+    margin: .2em;
+    padding: 1em;
+}
+
+.boton-cobrar {
+    width: 90%;
+    margin: .4em 0;
+    padding: 1em 0;
+}
+

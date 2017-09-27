@@ -15,34 +15,18 @@
 
 <body>
     <header>
-        <div id="logo">
-            <span class="icono"><i class="fa fa-shopping-basket fa-3x" aria-hidden="true"></i></span>
-            <h4>Abarrotes</h4>
-
-        </div>
+        <h2 id="logo"><span class="icono"><i class="fa fa-shopping-basket" aria-hidden="true"></i></span> Abarrotes <div id="user"> Le atiende : Administrador</div> </h2>
 
         <nav class="main-nav">
             <ul class="main-menu">
-                <li class="main-item"><a class="main-link" href=""><span class="icono"><i class="fa fa-home fa-3x" aria-hidden="true"></i></span> Ventas</a></li>
-                <li class="main-item"><a class="main-link" href=""><span class="icono"><i class="fa fa-users fa-3x" aria-hidden="true"></i></span></i> Clientes</a></li>
-                <li class="main-item"><a class="main-link" href=""><span class="icono"><i class="fa fa-barcode fa-3x" aria-hidden="true"></i></span> Productos</a></li>
-                <li class="main-item"><a class="main-link" href=""><span class="icono"><i class="fa fa-cog fa-3x" aria-hidden="true"></i></span></i> Configuración</a></li>
-                <li class="main-item"><a class="main-link" href=""><span class="icono"><i class="fa fa-calculator fa-3x" aria-hidden="true"></i></span> Corte</a></li>
+                <li class="main-item active"><a class="main-link" href="#"><span class="icono"><i class="fa fa-home" aria-hidden="true"></i></span> Ventas</a></li>
+                <li class="main-item"><a class="main-link" href="#"><span class="icono"><i class="fa fa-users" aria-hidden="true"></i></span></i> Clientes</a></li>
+                <li class="main-item"><a class="main-link" href="#"><span class="icono"><i class="fa fa-barcode" aria-hidden="true"></i></span> Productos</a></li>
+                <li class="main-item"><a class="main-link" href="#"><span class="icono"><i class="fa fa-cog " aria-hidden="true"></i></span></i> Configuración</a></li>
+                <li class="main-item"><a class="main-link" href="#"><span class="icono"><i class="fa fa-calculator" aria-hidden="true"></i></span> Corte</a></li>
             </ul>
         </nav>
-
-        <div id="user">
-            <a href="">
-                <span class="icono"><i class="fa fa-user fa-3x" aria-hidden="true"></i></span>
-                
-                <h4>Administrador</h4>
-        </a>
-
-        </div>
-
-
     </header>
-
 
 
     <section id="venta">
@@ -111,6 +95,88 @@
 
                 </div>
 
+                <button type="button" id="ventaDia" class="btn btn-primary btn-lg" data-toggle="modal" data-target=".bd-ventas-lg">Ventas del día y Devoluciones</button>
+
+                <div class="modal fade bd-ventas-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Ventas del día</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                         <span aria-hidden="true">&times;</span>
+                                    </button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="formas-pago" class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-7 col-12">
+                                            <div id="etiqueta-informacion">
+                                                <label for="">Puedes buscar por folio o nombre del ticket:</label>
+                                            </div>
+                                            <div id="etiqueta-total">
+                                                <input type="text" placeholder="Buscar">
+                                            </div>
+                                            <div>
+                                                <table class="table">
+                                                    <thead>
+                                                        <th>Folio</th>
+                                                        <th>Arts</th>
+                                                        <th>Hora</th>
+                                                        <th>Total</th>
+                                                    </thead>
+                                                    <tbody>
+                                                        <th>5375</th>
+                                                        <th>1</th>
+                                                        <th>1:08 pm</th>
+                                                        <th>$8.00</th>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div id="formas-pago">
+                                                <label for="">Del día:</label>
+                                                <label for="">Cajero:</label>
+                                                <label for="">Ventas a creditos</label>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 col-12">
+                                            <h4>Ticket</h4>
+                                            <label for="">Folio: 5372</label>
+                                            <label for="">Cajero: CAJERO</label>
+                                            <label for="">Cliente:Al contado</label>
+
+                                            <label for="">24 de Septiembre 2017 11:54 am</label>
+
+                                            <table class="table">
+                                                <thead>
+                                                    <th>Cant.</th>
+                                                    <th>Descripción</th>
+                                                    <th>Importe</th>
+                                                </thead>
+
+                                                <tbody>
+                                                    <th>2</th>
+                                                    <th>Bubbaloo</th>
+                                                    <th>$1.00</th>
+                                                </tbody>
+                                            </table>
+
+                                            <button>Devolver Artículo seleccionado</button>
+
+                                            <label for="">Total</label>
+                                            <label for="">Pagó con:</label>
+                                            <button>Notas de la venta</button>
+
+                                            <button>Cancelar Venta</button>
+                                            <button>Facturar</button>
+                                            <button>Imprimir copia</button>
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
             </form>
         </section>
 
@@ -165,10 +231,10 @@
 
 
             <div id="cobrar-ticket">
-                <button type="button" id="cobrar" class="btn btn-primary form-control" data-toggle="modal" data-target=".bd-example-modal-lg">Cobrar</button>
+                <button type="button" id="cobrar" class="btn btn-primary form-control" data-toggle="modal" data-target=".bd-cobrar-lg">Cobrar</button>
 
 
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal fade bd-cobrar-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -230,7 +296,6 @@
                 </div>
 
                 <button id="ticket" class="btn btn-success form-control">Reimprimir ultimo ticket</button>
-                <button id="venta-dia" class="btn btn-success form-control">Ventas del día</button>
 
             </div>
             <div id="detalles-compra">

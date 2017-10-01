@@ -1,12 +1,13 @@
 html {
     position: relative;
-    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%
 }
 
 body {
     font-size: 16px;
     font-family: poppins-regular;
-    background: #F7F7F9;
 }
 
 @font-face {
@@ -42,7 +43,7 @@ DISEÑO DEL HEADER
 */
 
 header {
-    background: #083C61;
+    background: #1f3c52;
 }
 
 #logo {
@@ -50,17 +51,19 @@ header {
     font-family: poppins-bold;
     text-transform: uppercase;
     text-align: center;
-    color: rgba(255, 255, 255, 0.82);
+    color: #FFF;
     font-size: 1.5em;
-    padding: .5em 3.5em;
+    padding: .5em 1.5em;
     margin: 0 4em 0 0;
+    letter-spacing: 0.1em;
 }
 
-#user{
+#user {
     text-align: center;
-    color: #ccc;
+    color: #C8CEEB;
     font-size: .5em;
 }
+
 .main-nav {
     display: inline-block;
 }
@@ -106,70 +109,119 @@ header {
     color: rgba(235, 241, 243, 0.75);
 }
 
-
-/*Diseño de la zona de venta*/
-
-#venta {
-    color: #000;
-    width: 100%;
-    min-height: 87%;
-    padding-top: .5em;
-}
+/*
+ZONA DE BUSQUEDA DE PRODUCTO
+ENTRADAS
+SALIDAS
+MAYOREO
+MODAL DETALLES Y DEVOLUCIONES
+*/
 
 #operaciones-venta {
     position: absolute;
-    min-height: 100%;
+    display: inline-block;
     width: 25%;
-    font-size: 1em;
-    font-family: poppins-regular;
-    text-align: center;
+    color: #000;
 }
 
-.btn-outline-primary {
-    width: 80%;
-    margin: .3em;
+#ventaDia {
+    width: 100%;
+    margin: 1em 0;
 }
 
-
-/*Diseño de la zona de detalles*/
-
-#detalles {
-    position: absolute;
-    width: 75%;
-    margin-left: 25%;
-    min-height: 100%;
-    font-size: 1em;
-    font-family: poppins-regular;
-    text-align: center;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-}
-
-.busquedas {
-    width: 70%;
-    height: 2.9em;
-    border-radius: 5px 0 0 5px;
-    padding: 1.5em 1em;
-    margin: 1em 0 1.5em 0;
-    border: 1px solid #000;
+#input-folio {
+    width: 100%;
+    padding: .5em;
+    margin: .2em 0 .2em 0;
     font-family: poppins-medium;
 }
 
-.botonbusqueda {
-    border: 0;
-    height: 3em;
-    width: 25%;
-    border-radius: 0 5px 5px 0;
-    margin: .3em 0;
+.detalles {
+    width: 100%;
 }
 
-#cobrar {
+.btn-devolver {
+    width: 100%;
+}
+
+.btn-nota {
+    width: 100%;
+}
+
+.btn-grupo {
+    width: 32%;
+    margin-top: .8em;
+}
+
+
+/*
+ZONA PRINCIPAL DE VENTA
+FORMULARIO BUSQUEDA COD. BARRA
+TABLA DE PRODUCTOS VENDIDOS
+BOTON COBRAR
+BOTON ULTIMO TICKET
+INFORMACION TOTAL PRODUCTOS Y COSTO
+*/
+
+#principal {
+    display: inline-block;
+    width: 74%;
+    min-height: 520px;
+    font-size: 1em;
+    font-family: poppins-regular;
+    margin-left: 26%;
+}
+
+.agregar {
+    padding: .8em;
+    letter-spacing: .05em;
+    font-family: poppins-medium;
+}
+
+#codigobarras {
+    margin: 1em 0 1em 0;
+}
+
+#titulo-tabla {
+    margin: .5em 0;
+    font-family: poppins-medium;
+}
+
+#cobrar-venta {
+    width: 100%;
+    position: relative;
+}
+
+#btn-cobrar {
     width: 70%;
     font-size: 1em;
     font-family: poppins-medium;
     line-height: 2.5em;
     margin-top: .6em;
     margin-bottom: .6em;
+}
+
+#exampleModalLabel {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: poppins-regular;
+}
+
+#etiqueta-informacion {
+    color: #000;
+    font-size: 1.5em;
+    padding: .2em;
+}
+
+.boton-cobrar {
+    width: 90%;
+    margin: .4em 0;
+    padding: 1em 0;
+}
+
+.cantidad {
+    font-size: 1.2em;
+    font-family: poppins-medium;
 }
 
 #ticket {
@@ -185,14 +237,12 @@ header {
     width: 20%;
 }
 
-#cobrar-ticket {
-    width: 100%;
-    position: relative;
-}
-
-#detalles-compra {
-    width: 100%;
-    position: absolute;
+.venta {
+    font-size: 1.6em;
+    font-family: poppins-medium;
+    display: inline-block;
+    width: 55%;
+    text-align: center;
 }
 
 .total {
@@ -203,67 +253,10 @@ header {
     text-align: center;
 }
 
-.venta {
-    font-size: 1.6em;
-    font-family: poppins-medium;
-    display: inline-block;
-    width: 55%;
-    text-align: center;
-}
-
-.cant {
-    font-size: 1.6em;
-    font-family: poppins-bold;
-    bottom: 0;
-}
-
-
-/*Maquetación modal cobrar*/
-
-.modal-content {
-    background: #D7D7D7;
-}
-
-#exampleModalLabel {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: poppins-regular;
-}
-
-#etiqueta-informacion {
-    background: #223a4b;
+footer {
+    width: 100%;
+    background: #1F3C52;
     color: #FFF;
-    font-size: 1.5em;
-    padding: .2em;
-    font-family: poppins-medium;
-    text-transform: uppercase;
-}
-
-#etiqueta-total {
-    color: #000;
-    font-size: 2em;
-    font-family: poppins-medium;
-}
-
-.modopago {
-    width: 100%;
-    font-size: 1em;
-    margin: .2em;
-    padding: 1em;
-}
-
-.boton-cobrar {
-    width: 90%;
-    margin: .4em 0;
-    padding: 1em 0;
-}
-
-
-/*
-Modal ventas del día
-*/
-
-#ventaDia {
-    width: 100%;
-    margin: 1em 0;
+    padding:1em; 
+    height: 70px;
 }

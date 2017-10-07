@@ -16,22 +16,8 @@
 </head>
 
 <body>
-    <header>
-        <h2 id="logo"><span class="icono"><i class="fa fa-shopping-basket" aria-hidden="true"></i></span> Abarrotes
-            <div id="user"> Le atiende : Administrador</div>
-        </h2>
 
-        <nav class="main-nav">
-            <ul class="main-menu">
-                <li class="main-item active"><a class="main-link" href="#"><span class="icono"><i class="fa fa-home" aria-hidden="true"></i></span> Ventas</a></li>
-                <li class="main-item"><a class="main-link" href="#"><span class="icono"><i class="fa fa-users" aria-hidden="true"></i></span></i> Clientes</a></li>
-                <li class="main-item"><a class="main-link" href="#"><span class="icono"><i class="fa fa-barcode" aria-hidden="true"></i></span> Productos</a></li>
-                <li class="main-item"><a class="main-link" href="#"><span class="icono"><i class="fa fa-cog " aria-hidden="true"></i></span></i> Configuración</a></li>
-                <li class="main-item"><a class="main-link" href="#"><span class="icono"><i class="fa fa-calculator" aria-hidden="true"></i></span> Corte</a></li>
-            </ul>
-        </nav>
-    </header>
-
+<?php include('header.php')?>
 
 
     <section id="operaciones-venta">
@@ -234,7 +220,7 @@
 
         <!--Boton modal para el cobro de la venta-->
         <div id="cobrar-venta">
-            <button type="button" id="btn-cobrar" class="btn  btn-md" data-toggle="modal" data-target=".bd-cobrar-lg">Cobrar</button>
+            <button type="button" id="btn-cobrar" class="btn btn-succe btn-md" data-toggle="modal" data-target=".bd-cobrar-lg">Cobrar</button>
 
             <div class="modal fade bd-cobrar-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
@@ -301,10 +287,7 @@
         </div>
     </section>
 
-    <footer>
-        <p class="text-center">Punto de venta.</p>
-    </footer>
-
+<?php include('footer.php')?>
 </body>
 
 <script>

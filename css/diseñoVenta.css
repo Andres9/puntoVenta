@@ -260,3 +260,15 @@ footer {
     padding:1em; 
     height: 70px;
 }
+
+/*---------------------------------------------------------------*/
+.gral{
+    min-height: 520px;
+    font-size: 1em;
+    font-family: poppins-regular;
+}
+
+.title{
+    font-family: poppins-medium;
+    font-size: 1.2em;
+}

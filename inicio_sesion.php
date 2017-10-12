@@ -29,7 +29,7 @@
     </div>
 
     <footer id="creditos">
-        <h7>Derechos reservados punto de venta.</h7>
+        <h7>punto de venta.</h7>
     </footer>
 
 </body>

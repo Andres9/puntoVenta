@@ -43,7 +43,7 @@ DISEÑO DEL HEADER
 */
 
 header {
-    background: #1f3c52;
+    background: #2e353d;
 }
 
 #logo {
@@ -255,7 +255,7 @@ INFORMACION TOTAL PRODUCTOS Y COSTO
 
 footer {
     width: 100%;
-    background: #1F3C52;
+    background: #2e353d;
     color: #FFF;
     padding:1em; 
     height: 70px;
@@ -271,4 +271,26 @@ footer {
 .title{
     font-family: poppins-medium;
     font-size: 1.2em;
+}
+
+.data-forms{
+    width: 70%;
+    margin:  0 auto;
+}
+
+#tabs{
+    min-height: 510px;
+}
+
+
+.label-info{
+    width: 20%;
+    padding-top: .2em;
+}
+
+.input-info{
+    width: 60%;
+    padding: .2em;
+    margin-bottom: .3em;
+    display: block;
 }

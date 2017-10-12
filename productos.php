@@ -39,15 +39,15 @@
                 </li>
             </ul>
             <div id="tabs-1">
-                <div id="nuevo-producto">
+                <div class="data-forms">
                     <form action="">
                         <h2 class="title">Nuevo producto.</h2>
-                        <label for="" class="label">Código de barras:</label>
-                        <input type="text" name="" id="" class="input">
-                        <label for="" class="label">Descripción:</label>
-                        <input type="text" name="" id="" class="input">
+                        <label for="" class="label-title">Código de barras:</label>
+                        <input type="text" name="" id="" class="input-info">
+                        <label for="" class="label-title">Descripción:</label>
+                        <input type="text" name="" id="" class="input-info">
                         <div>
-                            <label for="" class="label">Se vende</label>
+                            <label for="" class="label-title">Se vende</label>
                             <label for="">
                                 <input type="radio" class="radio">Por pieza</label>
                             <label for="">
@@ -55,57 +55,64 @@
                             <label for="">
                                 <input type="radio" class="radio">Por kit</label>
                         </div>
-                        <label for="" class="label">Precio costo:</label>
-                        <input type="text" name="" id="" class="input">
-                        <label for="" class="label">Precio venta:</label>
-                        <input type="text" name="" id="" class="input">
-                        <label for="" class="label">Precio mayoreo:</label>
-                        <input type="text" name="" id="" class="input">
-                        <label for="" class="label">Departamento:</label>
-                        <input type="text" name="" id="" class="input">
+                        <label for="" class="label-title">Precio costo:</label>
+                        <input type="text" name="" id="" class="input-info">
+                        <label for="" class="label-title">Precio venta:</label>
+                        <input type="text" name="" id="" class="input-info">
+                        <label for="" class="label-title">Precio mayoreo:</label>
+                        <input type="text" name="" id="" class="input-info">
+                        <label for="" class="label-title">Departamento:</label>
+                        <input type="text" name="" id="" class="input-info">
                         <div id="check">
                             <label for="">
                                 <input type="checkbox">Este producto si utiliza inventario
                             </label>
                         </div>
-                        <label for="" class="label">Cantidad actual:</label>
-                        <input type="text" name="" id="" class="input">
-                        <label for="" class="label">Minimo:</label>
-                        <input type="text" name="" id="" class="input">
+                        <label for="" class="label-title">Cantidad actual:</label>
+                        <input type="text" name="" id="" class="input-info">
+                        <label for="" class="label-title">Minimo:</label>
+                        <input type="text" name="" id="" class="input-info">
                         <button class="btn btn-lg">Guardar producto</button>
                         <button class="btn btn-lg">Cancelar</button>
                     </form>
                 </div>
             </div>
             <div id="tabs-2">
+                <div class="data-forms">
                 <h2 class="title">Modificar producto</h2>
-                <label for="">Código del producto</label>
-                <input type="text">
-                <button>Aceptar</button>
+                <label for="" class="label-title">Código del producto</label>
+                <input type="text" input="input-info">
+                <button class="btn btn-lg">Aceptar</button>
+                </div>
             </div>
             <div id="tabs-3">
+                <div class="data-forms">
                 <h2 class="title">Eliminar producto</h2>
-                <label for="">Código del producto</label>
-                <input type="text">
-                <button>Aceptar</button>
-            </div>
+                <label for="" class="label-title">Código del producto</label>
+                <input type="text" class="input-info">
+                <button class="btn btn-lg">Aceptar</button>
+                </diV>
+                </div>
             <div id="tabs-4">
-            <h2 class="title">Departamentos</h2>
-            <input type="text" placeholder="buscar departamento">
-            <button>Nuevo departamento</button>
-            <button>Eliminar</button>
-            <label for="">Nombre:</label>
-            <input type="text">
-            <button>Guardar departamento</button>
-            <button>Cancelar</button>
+                <div class="data-forms">
+                <h2 class="title">Departamentos</h2>
+                <input type="text"  class="input-info"placeholder="buscar departamento">
+                <button class="btn">Nuevo departamento</button>
+                <button class="btn">Eliminar</button>
+                <label for="" class="label-title">Nombre:</label>
+                <input type="text" class="input-info">
+                <button class="btn btn-lg">Guardar departamento</button>
+                <button class="btn btn-lg">Cancelar</button>
+                </div>
             </div>
             <div id="tabs-5">
+            <div class="data-forms">
             <h2 class="title">Reporte de productos vendidos</h2>
             <label for="">Mostrar ventas de:</label>
             <input type="text">
-            <button>Exportar</button>
+            <button >Exportar</button>
             <button>Imprimir</button>
-            <table>
+            <table class="table">
                 <thead>
                 <tr>
                 <td>Código</td>
@@ -116,6 +123,7 @@
                 </tr>
                 </thead>
             </table>
+            </div>
             </div>
         </div>
     </section>

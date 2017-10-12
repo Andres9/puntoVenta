@@ -39,37 +39,43 @@
                 </li>
             </ul>
             <div id="tabs-1">
-                <div id="nuevo-producto">
+                <div class="data-forms">
                     <form action="">
                         <h2 class="title" >Agregar inventario.</h2>
-                        <label for="" class="label">Código del producto:</label>
-                        <input type="text" name="" id="" class="input">
+                        <label for="" class="label-title">Código del producto:</label>
+                        <input type="text" name="" id="" class="input-info">
                         <label for="" class="label">Descripción:</label>
                         <label for="" class="label">Cantidad actual:</label>
                         <label for="" class="label">Cantidad</label>
-                        <input type="text" name="" id="" class="input">
+                        <input type="text" name="" id="" class="input-info">
                         
                         <button class="btn btn-lg">Agregar cantidad a inventario</button>
                      
                     </form>
                 </div>
             </div>
+
             <div id="tabs-2">
-                <h2 class="title" >Ajustes de inventario</h2>
-                <label for="" class="label">Código del producto:</label>
-                <input type="text" name="" id="" class="input">
+            <div class="data-forms">
+            <form action="">
+                <h2 class="title" >Ajuste de inventario.</h2>
+                <label for="" class="label-title">Código del producto:</label>
+                <input type="text" name="" id="" class="input-info">
                 <label for="" class="label">Descripción:</label>
                 <label for="" class="label">Cantidad actual:</label>
                 <label for="" class="label">Cantidad</label>
-                <input type="text" name="" id="" class="input">
-                
+                <input type="text" name="" id="" class="input-info">
                 <button class="btn btn-lg">Agregar cantidad a inventario</button>
+            </form>
+</div>
             </div>
+
             <div id="tabs-3">
+                <div class="data-forms">
                 <h2 class="title" >Productos bajos en inventario</h2>
                  <p>A continuación se muestra un listado con productos con inventario debajo de su minimo</p>
                  <button type="">Exportar a excel</button>
-                 <table>
+                 <table class="table">
                     <thead>
                     <tr>
                     <td>Código</td>
@@ -81,11 +87,14 @@
                     </tr>
                     </thead>
                  </table>
+                 </div>
             </div>
+
             <div id="tabs-4">
-            <h2 class="title" >Reporte de inventario</h2>
-            <h3>Coste del inventario</h3>
-            <h3>Cantidad de productos en inventario</h3>
+                <div class="data-forms">
+            <h2  >Reporte de inventario</h2>
+            <label>Coste del inventario</label>
+            <label>Cantidad de productos en inventario</label>
             <label for="">Departamento</label>
             <input type="text">
             <button>Agregar inventario</button>
@@ -93,7 +102,7 @@
             <button>Exportar</button>
             <button>Imprimir</button>
 
-            <table>
+            <table class="table">
             <thead>
             <tr>
             <td>Código</td>
@@ -106,9 +115,11 @@
             </thead>
             </table>
             </div>
-        </div>
+            </div>
+        
         <div id="tabs-5">
-        <h2 class="title" >Historial de movimientos de inventario</h2>
+        <div class="data-forms">
+        <h2  >Historial de movimientos de inventario</h2>
         <label for="">Del dia</label>
         <input type="text">
         <label for="">Buscar por</label>
@@ -116,7 +127,7 @@
         <label for="">Movimientos</label>
         <input type="text">
 
-        <table>
+        <table class="table">
             <thead>
             <tr>
             <td>Hora</td>
@@ -129,6 +140,7 @@
             </tr>
             </thead>
             </table>
+        </div>
         </div>
     </section>
 

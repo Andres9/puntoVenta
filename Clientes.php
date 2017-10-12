@@ -33,18 +33,18 @@
                 </li>
             </ul>
             <div id="tabs-1">
-                <div id="nuevo-producto">
+                <div class="data-forms">
                     <form action="">
                         <h2 class="title" >Nuevo cliente.</h2>
                         <p>Llene la siguiente informacion acerca del nuevo cliente.</p>
-                        <label for="" class="label">Nombre completo:</label>
-                        <input type="text" name="" id="" class="input">
-                        <label for="" class="label">Dirección:</label>
-                        <input type="text" name="" id="" class="input">
-                        <label for="" class="label">Telefono(s):</label>
-                        <input type="text" name="" id="" class="input">
-                        <label for="" class="label">Limite de credito:</label>
-                        <input type="text" name="" id="" class="input"> <p>si es cero, no tiene limite de credito</p>
+                        <label for="" class="label-info">Nombre completo:</label>
+                        <input type="text" name="" id="" class="input-info">
+                        <label for="" class="label-info">Dirección:</label>
+                        <input type="text" name="" id="" class="input-info">
+                        <label for="" class="label-info">Telefono(s):</label>
+                        <input type="text" name="" id="" class="input-info">
+                        <label for="" class="label-info">Limite de credito:</label>
+                        <input type="text" name="" id="" class="input-info"> <p>si es cero, no tiene limite de credito</p>
                         
                         <button class="btn btn-lg">Guardar cliente</button>
                         <button class="btn btn-lg">Cancelar</button>
@@ -52,16 +52,20 @@
                 </div>
             </div>
             <div id="tabs-2">
+                <div class="data-forms">
                 <h2 class="title" >Modificar cliente</h2>
                 <label for="">Teclee el nombre o número del cliente.</label>
-                <input type="text">
-                <button>Aceptar</button>
+                <input type="text" class="input-info">
+                <button class="btn btn-lg">Aceptar</button>
+                </div>
             </div>
             <div id="tabs-3">
+                <div class="data-forms">
                 <h2 class="title" >Eliminar cliente</h2>
                 <label for="">Teclee el nombre o número del cliente.</label>
-                <input type="text">
-                <button>Aceptar</button>
+                <input type="text" class="input-info">
+                <button class="btn btn-lg">Aceptar</button>
+                </div>
             </div>
         </div>
     </section>

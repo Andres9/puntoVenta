@@ -41,13 +41,15 @@ body {
 }
 
 #sesion{
-    font-family: poppins-regular;
-    display: block;
-    padding-top: 4em;
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
+    font-family: poppins-medium;
+    display: inline-block;
+    margin: 0 auto;
+    padding-top: 1em;
     color: #223A4B;
+    border: 1px solid red;
+    border-radius: 7px;
+    text-transform: uppercase;
+    transform: translateY(20%);
 }
 
 .form-control{

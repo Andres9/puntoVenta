@@ -8,16 +8,13 @@
     <link rel="stylesheet" href="fonts/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/logincss.css">
- 
 </head>
 
 <body>
-
-
     <div id="sesion">
         <form action="login.php" method="POST">
             <h2 id="inicio" class="text-center">Inicio de Sesión</h2>
-            <div id="nombre" class="text-center"><h1>Punto <span id="venta">de</span> Venta</h1></div>
+            <div id="nombre" class="text-center"><h1>Punto de Venta</h1></div>
             <input type="text" name="user" value="" placeholder="Usuario" class="campo form-control  col-12">
             <input type="password" name="pass" value="" placeholder="Contraseña" class="campo form-control  col-12">
             <input type="submit" value="Acceder" name="submit" class="btn-campo btn btn-primary form-control  col-12">

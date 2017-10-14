@@ -15,21 +15,21 @@
 
 
     <div id="sesion">
-        <h2 id="inicio" class="text-center">Inicio de Sesión</h2>
-        <div id="nombre" class="text-center"><h1>Punto <span id="venta">de</span> Venta</h1></div>
-        <form >
-            <input type="text" name="" value="" placeholder="Usuario" class="campo form-control  col-12">
-            <input type="password" name="" value="" placeholder="Contraseña" class="campo form-control  col-12">
-            <input type="button" value="Acceder" class="btn-campo btn btn-primary form-control  col-12">
+        <form action="login.php" method="POST">
+            <h2 id="inicio" class="text-center">Inicio de Sesión</h2>
+            <div id="nombre" class="text-center"><h1>Punto <span id="venta">de</span> Venta</h1></div>
+            <input type="text" name="user" value="" placeholder="Usuario" class="campo form-control  col-12">
+            <input type="password" name="pass" value="" placeholder="Contraseña" class="campo form-control  col-12">
+            <input type="submit" value="Acceder" name="submit" class="btn-campo btn btn-primary form-control  col-12">
         </form>
     </div>
 
     <div id="promocion">
-
+    
     </div>
 
     <footer id="creditos">
-        <h7>punto de venta.</h7>
+        <h7>Punto de venta.</h7>
     </footer>
 
 </body>

@@ -11,6 +11,7 @@
         <li class="main-item"><a class="main-link" href="inventario.php"><span class="icono"><i class="fa fa-barcode" aria-hidden="true"></i></span> Inventario</a></li>
         <li class="main-item"><a class="main-link" href="#"><span class="icono"><i class="fa fa-cog " aria-hidden="true"></i></span></i> Configuración</a></li>
         <li class="main-item"><a class="main-link" href="#"><span class="icono"><i class="fa fa-calculator" aria-hidden="true"></i></span> Corte</a></li>
+        <li class="main-item"><a class="main-link" href="#"><span class="icono"><i class="fa fa-calculator" aria-hidden="true"></i></span> Cerrar sesión</a></li>
     </ul>
 </nav>
 </header>

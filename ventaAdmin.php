@@ -1,3 +1,9 @@
+<?php
+  include('conexion.php');
+  session_start();
+  if(!$_SESSION){header('Location: index.php');}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,11 +25,10 @@
 
 <?php include('header.php')?>
 
-
     <section id="operaciones-venta">
 
         <div id="accordion">
-            <h3>Buscar</h3>
+            <h3>Buscar - venta por pieza</h3>
             <div>
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Buscar producto...">
@@ -47,37 +52,50 @@
 
                 </table>
             </div>
+            <h3>Venta por paquete</h3>
+            <div>
+            <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar producto...">
+            <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      </span>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>------</td>
+                    <td>$------</td>
+                </tr>
+            </tbody>
+
+        </table>
+            </div>
             <h3>Entradas</h3>
             <div>
-                <p>
-                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet,
-                    mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit
-                    faucibus urna.
-                </p>
+               <h2>Entrada de Efectivo</h2>
+               <p>Escriba el dinero a ingresar a la caja.</p>
+               <form action="">
+               <input type="text">
+               <button>Aceptar</button>
+               <button>Cancelar</button>
+               <button>Registro de entradas</button>
+               </form>
             </div>
             <h3>Salidas</h3>
             <div>
-                <p>
-                    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean
-                    in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia
-                    ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                </p>
-                <ul>
-                    <li>List item one</li>
-                    <li>List item two</li>
-                    <li>List item three</li>
-                </ul>
-            </div>
-            <h3>Mayoreo</h3>
-            <div>
-                <p>
-                    Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante
-                    ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est.
-                </p>
-                <p>
-                    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent
-                    per conubia nostra, per inceptos himenaeos.
-                </p>
+            <h2>Salida de Efectivo</h2>
+               <form action="">
+               <input type="text">
+               <button>Aceptar</button>
+               <button>Cancelar</button>
+               <button>Registro de salidas</button>
+               </form>
             </div>
         </div>
         </div>

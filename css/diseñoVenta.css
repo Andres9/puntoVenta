@@ -109,6 +109,7 @@ header {
     color: rgba(235, 241, 243, 0.75);
 }
 
+
 /*
 ZONA DE BUSQUEDA DE PRODUCTO
 ENTRADAS
@@ -257,38 +258,39 @@ footer {
     width: 100%;
     background: #2e353d;
     color: #FFF;
-    padding:1em; 
-    height: 70px;
+    padding: .5em;
+    height: 50px;
 }
 
+
 /*---------------------------------------------------------------*/
-.gral{
+
+.gral {
     min-height: 520px;
     font-size: 1em;
     font-family: poppins-regular;
 }
 
-.title{
+.title {
     font-family: poppins-medium;
     font-size: 1.2em;
 }
 
-.data-forms{
+.data-forms {
     width: 70%;
-    margin:  0 auto;
+    margin: 0 auto;
 }
 
-#tabs{
+#tabs {
     min-height: 510px;
 }
 
-
-.label-info{
+.label-info {
     width: 20%;
     padding-top: .2em;
 }
 
-.input-info{
+.input-info {
     width: 60%;
     padding: .2em;
     margin-bottom: .3em;

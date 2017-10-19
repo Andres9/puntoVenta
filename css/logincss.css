@@ -1,13 +1,14 @@
-html{
+html {
     position: relative;
     min-height: 100%;
 }
+
 body {
-    font-size: 15px;
+    font-size: 16px;
     margin: 0;
     box-sizing: border-box;
     font-family: poppins;
-    margin: 0 0 120px;
+    margin: 0 0 100px;
 }
 
 @font-face {
@@ -30,41 +31,55 @@ body {
     src: url(../fonts/Poppins-Regular.ttf);
 }
 
-#nombre {
+#sesion {
     font-family: poppins-medium;
-    font-size: .6rem;
-    display: inline-block;
-    /*color: rgba(127, 179, 240, 1);*/
-    color: #223A4B;
-    max-height: 10%;
-    margin-left: 10%;
-}
-
-#sesion{
-    font-family: poppins-medium;
-    display: inline-block;
+    width: 30%;
+    display: block;
     margin: 0 auto;
     padding-top: 1em;
-    color: #223A4B;
-    border: 1px solid red;
-    border-radius: 7px;
-    text-transform: uppercase;
+    border-radius: 10px;
     transform: translateY(20%);
 }
 
-.form-control{
+#inicio_sesion {
+    color: #223A4B;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+#puntoventa {
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+    font-family: poppins-bold;
+}
+
+.form-control {
+    margin: 0 auto;
     padding: 1rem;
-    margin: 1rem;
+    margin: .7rem 0 .7rem 0;
     color: #223A4B;
 }
 
-#creditos{
+#creditos {
     width: 100%;
     bottom: 0;
     position: absolute;
-    height: 120px;
+    height: 100px;
     color: #FFF;
     background: #2e353d;
-    padding: 2.5rem;
     text-align: center;
+    margin-top: 1em;
+}
+
+#creditos #sistema {
+    font-size: 1em;
+    padding-top: 1em;
+}
+
+#creditos .fa {
+    color: #FFF;
+    font-size: 1.6em;
+    padding-right: .5rem;
+    margin: 0;
 }

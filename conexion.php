@@ -9,9 +9,6 @@
     if(!$conn){
         die("Conexion fallida: ".mysql_connect_error());
     }
-    else{
-        echo 'Conexion exitosa';
-    }
-
+    
      mysqli_set_charset($conn,'utf-8');
 ?>

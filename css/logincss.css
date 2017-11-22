@@ -61,6 +61,18 @@ body {
     color: #223A4B;
 }
 
+.servicios{
+    position: relative;
+    margin: 100px;
+    text-align: center;
+}
+
+.item-img{
+    font-size: 3em;
+    color: #223a4b;
+    text-align: center;
+}
+
 #creditos {
     width: 100%;
     bottom: 0;

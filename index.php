@@ -24,8 +24,21 @@
         </form>
     </div>
 
-    <div id="promocion">
-    
+    <div class="servicios container">
+    <div class="row">
+        <div class="item col-md-4">
+            <div class="item-img"><i class="fa fa-check-circle-o" aria-hidden="true"></i></div>
+            <p>Conoce en detalle tus ganancias</p>
+        </div>
+        <div class="item col-md-4">
+        <div class="item-img"><i class="fa fa-check-circle-o" aria-hidden="true"></i></div>
+        <p>Conoce tus productos más vendidos.</p>
+        </div>
+        <div class="item col-md-4">
+        <div class="item-img"><i class="fa fa-check-circle-o" aria-hidden="true"></i></div>
+        <p>Lleva el control total de tus ventas.</p>
+        </div>
+    </div>
     </div>
 
     <footer id="creditos">

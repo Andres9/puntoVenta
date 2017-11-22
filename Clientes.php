@@ -1,3 +1,5 @@
+<?php session_start()?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -17,7 +19,7 @@
 
 <body>
 
-    <?php include('header.php')?>
+    <?php include_once('header.php')?>
 
     <section class="gral">
         <div id="tabs">

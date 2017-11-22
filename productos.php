@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -46,23 +47,18 @@
                         <input type="text" name="" id="" class="input-info">
                         <label for="" class="label-title">Descripción:</label>
                         <input type="text" name="" id="" class="input-info">
-                        <div>
-                            <label for="" class="label-title">Se vende</label>
-                            <label for="">
-                                <input type="radio" class="radio">Por pieza</label>
-                            <label for="">
-                                <input type="radio" class="radio">A Granel</label>
-                            <label for="">
-                                <input type="radio" class="radio">Por kit</label>
-                        </div>
                         <label for="" class="label-title">Precio costo:</label>
                         <input type="text" name="" id="" class="input-info">
                         <label for="" class="label-title">Precio venta:</label>
                         <input type="text" name="" id="" class="input-info">
                         <label for="" class="label-title">Precio mayoreo:</label>
                         <input type="text" name="" id="" class="input-info">
+                        
                         <label for="" class="label-title">Departamento:</label>
-                        <input type="text" name="" id="" class="input-info">
+                        <select name="depto" class="input-info">
+                            <option value="">Sin departamento</option>
+                            <option value="">Papeleria</option>
+                        </select>
                         <div id="check">
                             <label for="">
                                 <input type="checkbox">Este producto si utiliza inventario

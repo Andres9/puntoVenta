@@ -18,7 +18,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <title>ventaAdmin</title>
+    <title>masVenta - Admin</title>
 </head>
 
 <body>
@@ -30,12 +30,35 @@
         <div id="accordion">
             <h3>Buscar - venta por pieza</h3>
             <div>
+                
+                <form action="" method="POST">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Buscar producto...">
+                    <input type="text" name="producto" class="form-control" placeholder="Buscar producto...">
                     <span class="input-group-btn">
-                                <button class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                              </span>
-                </div>
+                        <button class="btn btn-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </span>
+                    </div>
+                </form>
+
+                <?php
+if(isset($_POST['producto'])){
+    
+    $consulta = $_POST['producto'];
+    
+    $sql = "SELECT * FROM producto WHERE descripcion LIKE '%$consulta%'";
+    $result = mysqli_query($conn,$sql);
+
+    while($row = mysqli_fetch_array($result)){
+        echo "<table class='table'>";
+        echo "<tr>";
+        echo "<td>" . $row['descripcion'] ."</td>";
+        echo "<td>" . $row['precio_venta'] ."</td>";
+        echo "</tr>";
+        echo "</table>";
+    }
+}
+?>
+                
                 <table class="table">
                     <thead>
                         <tr>
@@ -49,7 +72,6 @@
                             <td>$------</td>
                         </tr>
                     </tbody>
-
                 </table>
             </div>
             <h3>Venta por paquete</h3>

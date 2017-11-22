@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 include('conexion.php');
 
@@ -16,7 +15,7 @@ if(isset($_POST['user']) && $_POST['user'] == !NULL
     if($username == $row['user'] && $password == $row['password']
     && $username == !NULL && $password == !NULL)
     {
-        $usuario = utf8_encode($row['user']);
+        $usuario = utf8_encode($row['nombre']);
         $_SESSION['name'] = $usuario;
         header('Location: ventaAdmin.php');
     }else{

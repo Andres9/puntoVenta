@@ -208,58 +208,61 @@
                             </span>
                         </div>
                         </form>
-                        <?php
-                            if(isset($_POST["insert_code"]) && ($_POST["insert_code"])){
-                                $codigo = $_POST["insert_code"];
-
-                                $consulta = "SELECT * FROM producto WHERE codigo='$codigo'";
-                                $result = mysqli_query($conn,$consulta);
-                                $fila = mysqli_fetch_array($result);
-
-                                if($fila["codigo"] == $codigo){?>
-                                    <div id="tabla">
-                                    <h4 id="titulo-tabla">Detalles de la venta</h4>
-                                    <table class="table">
-                                        <colgroup>
-                                            <col class="col1">
-                                            <col class="col2">
-                                            <col class="col3">
-                                            <col class="col4">
-                                            <col class="col5">
-                                            <col class="col6">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>Código de barras</th>
-                                                <th>Descripcion del producto.</th>
-                                                <th>Precio venta.</th>
-                                                <th>Cantidad</th>
-                                                <th>Importe</th>
-                                                <th>Existencia</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td><?php echo $fila["codigo"]?></td>
-                                                <td><?php echo $fila["descripcion"]?></td>
-                                                <td><?php echo '$'. $fila["venta"]?></td>
-                                                <td><?php echo $cantidad = 1;?></td>
-                                                <td><?php echo '$'. $fila["venta"]*1?></td>
-                                                <td><?php echo $fila["cantidad_actual"]-1?></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div><?php
-                                }
-                                
-                            }
-                            ?>
                     </div>
                 </div>
             </div>
         </div>
         </div>
 
+        <div id="tabla">
+            <h4 id="titulo-tabla">Detalles de la venta</h4>
+            <table class="table">
+                <colgroup>
+                    <col class="col1">
+                    <col class="col2">
+                    <col class="col3">
+                    <col class="col4">
+                    <col class="col5">
+                    <col class="col6">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Código de barras</th>
+                        <th>Descripcion del producto.</th>
+                        <th>Precio venta.</th>
+                        <th>Cantidad</th>
+                        <th>Importe</th>
+                        <th>Existencia</th>
+                    </tr>
+                </thead>
+        <?php
+            if(isset($_POST["insert_code"]) && ($_POST["insert_code"])){
+            $codigo = $_POST["insert_code"];
+            $consulta = "SELECT * FROM producto WHERE codigo='$codigo'";
+            $result = mysqli_query($conn,$consulta);
+            $fila = mysqli_fetch_array($result);
+
+            if($fila["codigo"] == $codigo){?>
+       
+                <tbody>
+                    <tr>
+                    <td><?php echo $fila["codigo"]?></td>
+                    <td><?php echo $fila["descripcion"]?></td>
+                    <td><?php echo '$'. $fila["venta"]?></td>
+                    <td><?php echo $cantidad = 1;?></td>
+                    <td><?php echo '$'. $fila["venta"]*1?></td>
+                    <td><?php echo $fila["cantidad_actual"]-1?></td>
+                    </tr>
+
+                </tbody>
+
+            <?php
+                                }
+                                
+                            }
+                            ?>
+                                        </table>
+        </div>
 
 
         <!--Boton modal para el cobro de la venta-->

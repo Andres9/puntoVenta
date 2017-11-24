@@ -2,8 +2,8 @@
 session_start();
 include('conexion.php');
 
-if(isset($_POST['user']) && $_POST['user'] == !NULL
-&& isset($_POST['pass']) && $_POST['pass'] == !NULL)
+if(isset($_POST['user']) && ($_POST['user'] == !NULL)
+&& isset($_POST['pass']) && ($_POST['pass'] == !NULL))
 {
     $username = $_POST['user'];
     $password = $_POST['pass'];

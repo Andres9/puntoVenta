@@ -1,6 +1,6 @@
 
     <header>
-        <h2 id="logo"><span class="icono"><i class="fa fa-shopping-basket" aria-hidden="true"></i></span>Abarrotes
+        <h2 id="logo"><span class="icono"><i class="fa fa-shopping-basket" aria-hidden="true"></i></span>másVentas
             <div id="user"> Le atiende :  <?php echo $_SESSION['name']?></div>
         </h2>
 

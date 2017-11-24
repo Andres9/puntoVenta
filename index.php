@@ -15,8 +15,8 @@
     <div id="sesion">
         <form action="login.php" method="POST">
             <div id="inicio_sesion">
+                <img src="img/masventas.png" width="35%">
                 <h4>Iniciar Sesión<h4>
-                <span id="puntoventa">Punto de Venta</span>
             </div>
             <input type="text" name="user" value="" placeholder="Usuario" class="campo form-control  col-12">
             <input type="password" name="pass" value="" placeholder="Contraseña" class="campo form-control  col-12">

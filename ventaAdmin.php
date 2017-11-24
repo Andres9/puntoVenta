@@ -30,49 +30,60 @@
         <div id="accordion">
             <h3>Buscar - venta por pieza</h3>
             <div>
-                
                 <form action="" method="POST">
                 <div class="input-group">
                     <input type="text" name="producto" class="form-control" placeholder="Buscar producto...">
                     <span class="input-group-btn">
-                        <button class="btn btn-secondary" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <input class="btn btn-secondary" type="submit" <i class="fa fa-search" aria-hidden="true"></i>>
                     </span>
                     </div>
-                </form>
 
-                <?php
-if(isset($_POST['producto'])){
-    
-    $consulta = $_POST['producto'];
-    
-    $sql = "SELECT * FROM producto WHERE descripcion LIKE '%$consulta%'";
-    $result = mysqli_query($conn,$sql);
-
-    while($row = mysqli_fetch_array($result)){
-        echo "<table class='table'>";
-        echo "<tr>";
-        echo "<td>" . $row['descripcion'] ."</td>";
-        echo "<td>" . $row['precio_venta'] ."</td>";
-        echo "</tr>";
-        echo "</table>";
-    }
-}
-?>
+                    <?php   
+            if(isset($_POST['producto']) && ($_POST["producto"]<>"")){
                 
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Descripcion</th>
-                            <th>Precio</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>------</td>
-                            <td>$------</td>
-                        </tr>
-                    </tbody>
-                </table>
+                $consulta = $_POST['producto'];
+                
+                $sql = "SELECT * FROM producto WHERE descripcion LIKE '%$consulta%'";
+                $result = mysqli_query($conn,$sql);
+
+                while($row = mysqli_fetch_array($result)){
+                    echo "<table class='table'>";
+                    echo "<tr>";
+                    echo "<td>" . $row['descripcion'] ."</td>";
+                    echo "<td>" .'$'. $row['venta'] ."</td>";
+                    echo $producto =  '<td class="control_detalles"><a href="../detalle_estudiante.php?codigo='.$row["id_producto"].'">
+                    <span> AGREGAR</span></a></td>';
+                    echo "";
+                    echo "</tr>";
+                    echo "</table>";
+                }
+            }
+            ?>
+
+                </form>
+                </div>
+            <h3>Varios</h3>
+            <div>
+            <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar producto...">
+            <span class="input-group-btn">
+                        <button class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                      </span>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>------</td>
+                    <td>$------</td>
+                </tr>
+            </tbody>
+        </table>
             </div>
             <h3>Venta por paquete</h3>
             <div>
@@ -95,29 +106,7 @@ if(isset($_POST['producto'])){
                     <td>$------</td>
                 </tr>
             </tbody>
-
         </table>
-            </div>
-            <h3>Entradas</h3>
-            <div>
-               <h2>Entrada de Efectivo</h2>
-               <p>Escriba el dinero a ingresar a la caja.</p>
-               <form action="">
-               <input type="text">
-               <button>Aceptar</button>
-               <button>Cancelar</button>
-               <button>Registro de entradas</button>
-               </form>
-            </div>
-            <h3>Salidas</h3>
-            <div>
-            <h2>Salida de Efectivo</h2>
-               <form action="">
-               <input type="text">
-               <button>Aceptar</button>
-               <button>Cancelar</button>
-               <button>Registro de salidas</button>
-               </form>
             </div>
         </div>
         </div>
@@ -211,52 +200,67 @@ if(isset($_POST['producto'])){
             <div class="container ">
                 <div class="row">
                     <div class="col-12">
+                        <form action="" method="POST">
                         <div class="input-group">
-                            <input type="text" class="form-control agregar" placeholder="Codigo de barras...">
+                            <input type="text" name="insert_code" class="form-control agregar" placeholder="Codigo de barras...">
                             <span class="input-group-btn">
-                                <button class="btn btn-secondary agregar " type="button">Agregar producto</button>
-                              </span>
+                                <input class="btn btn-secondary agregar " type="submit" value="Agregar producto">
+                            </span>
                         </div>
+                        </form>
+                        <?php
+                            if(isset($_POST["insert_code"]) && ($_POST["insert_code"])){
+                                $codigo = $_POST["insert_code"];
+
+                                $consulta = "SELECT * FROM producto WHERE codigo='$codigo'";
+                                $result = mysqli_query($conn,$consulta);
+                                $fila = mysqli_fetch_array($result);
+
+                                if($fila["codigo"] == $codigo){?>
+                                    <div id="tabla">
+                                    <h4 id="titulo-tabla">Detalles de la venta</h4>
+                                    <table class="table">
+                                        <colgroup>
+                                            <col class="col1">
+                                            <col class="col2">
+                                            <col class="col3">
+                                            <col class="col4">
+                                            <col class="col5">
+                                            <col class="col6">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>Código de barras</th>
+                                                <th>Descripcion del producto.</th>
+                                                <th>Precio venta.</th>
+                                                <th>Cantidad</th>
+                                                <th>Importe</th>
+                                                <th>Existencia</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><?php echo $fila["codigo"]?></td>
+                                                <td><?php echo $fila["descripcion"]?></td>
+                                                <td><?php echo '$'. $fila["venta"]?></td>
+                                                <td><?php echo $cantidad = 1;?></td>
+                                                <td><?php echo '$'. $fila["venta"]*1?></td>
+                                                <td><?php echo $fila["cantidad_actual"]-1?></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div><?php
+                                }
+                                
+                            }
+                            ?>
                     </div>
                 </div>
             </div>
         </div>
         </div>
 
-        <div id="tabla">
-            <h4 id="titulo-tabla">Detalles de la venta</h4>
-            <table class="table">
-                <colgroup>
-                    <col class="col1">
-                    <col class="col2">
-                    <col class="col3">
-                    <col class="col4">
-                    <col class="col5">
-                    <col class="col6">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>Código de barras</th>
-                        <th>Descripcion del producto.</th>
-                        <th>Precio venta.</th>
-                        <th>Cantidad</th>
-                        <th>Importe</th>
-                        <th>Existencia</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>---------</td>
-                        <td>---------</td>
-                        <td>---------</td>
-                        <td>---------</td>
-                        <td>---------</td>
-                        <td>---------</td>
-                    </tr>
 
-                </tbody>
-            </table>
-        </div>
 
         <!--Boton modal para el cobro de la venta-->
         <div id="cobrar-venta">

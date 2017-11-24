@@ -1,3 +1,9 @@
+<?php 
+session_start();
+include('conexion.php');
+if(!$_SESSION){header('Location: index.php');}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 

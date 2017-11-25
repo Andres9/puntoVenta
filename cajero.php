@@ -25,16 +25,16 @@
         <div id="tabs">
             <ul>
                 <li>
-                    <a href="#tabs-1">Nuevo cliente</a>
+                    <a href="#tabs-1">Nuevo cajero</a>
                 </li>
                 <li>
-                    <a href="#tabs-2">Buscar cliente</a>
+                    <a href="#tabs-2">Buscar cajero</a>
                 </li>
             </ul>
             <div id="tabs-1">
                 <div class="data-forms">
                     <form action="">
-                        <h2 class="title" >Nuevo cliente.</h2>
+                        <h2 class="title" >Nuevo cajero.</h2>
                         <p>Llene la siguiente informacion acerca del nuevo cliente.</p>
                         <label for="" class="label-info">Nombre completo:</label>
                         <input type="text" name="" id="" class="input-info">
@@ -52,7 +52,7 @@
             </div>
             <div id="tabs-2">
                 <div class="data-forms">
-                <h2 class="title" >Modificar cliente</h2>
+                <h2 class="title" >Buscar cajero</h2>
                 <label for="">Teclee el nombre o número del cliente.</label>
                 <input type="text" class="input-info">
                 <button class="btn btn-lg">Aceptar</button>

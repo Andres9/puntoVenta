@@ -1,3 +1,3 @@
 <footer>
-        <p class="text-center">Punto de venta.</p>
+        <p class="text-center">másVentas</p>
     </footer>

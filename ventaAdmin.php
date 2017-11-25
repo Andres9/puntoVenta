@@ -22,31 +22,26 @@
 </head>
 
 <body>
-
 <?php include('header.php')?>
-
     <section id="operaciones-venta">
-
         <div id="accordion">
             <h3>Buscar - venta por pieza</h3>
             <div>
-                <form action="" method="POST">
+            <form action="" method="POST">
                 <div class="input-group">
                     <input type="text" name="producto" class="form-control" placeholder="Buscar producto...">
                     <span class="input-group-btn">
                         <input class="btn btn-secondary" type="submit" <i class="fa fa-search" aria-hidden="true"></i>>
                     </span>
-                    </div>
-
-                    <?php   
-            if(isset($_POST['producto']) && ($_POST["producto"]<>"")){
-                
+                </div>
+                <?php   
+                if(isset($_POST['producto']) && ($_POST["producto"]<>""))
+                {
                 $consulta = $_POST['producto'];
-                
                 $sql = "SELECT * FROM producto WHERE descripcion LIKE '%$consulta%'";
                 $result = mysqli_query($conn,$sql);
-
-                while($row = mysqli_fetch_array($result)){
+                  while($row = mysqli_fetch_array($result))
+                  {
                     echo "<table class='table'>";
                     echo "<tr>";
                     echo "<td>" . $row['descripcion'] ."</td>";
@@ -56,60 +51,53 @@
                     echo "";
                     echo "</tr>";
                     echo "</table>";
+                  }
                 }
-            }
             ?>
+            </form>
+            </div>
 
-                </form>
-                </div>
             <h3>Varios</h3>
             <div>
-            <div class="input-group">
-            <input type="text" class="form-control" placeholder="Buscar producto...">
-            <span class="input-group-btn">
-                        <button class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                      </span>
-        </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Descripcion</th>
-                    <th>Precio</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>------</td>
-                    <td>$------</td>
-                </tr>
-            </tbody>
-        </table>
+            
+            <input type="text" class="form-control" placeholder="Código del producto"><br>
+            <input type="number" class="form-control" placeholder="Cantidad"><br>
+            <input class="btn btn-secondary" type="submit" value="Aceptar">
+            <input class="btn btn-secondary" type="submit" value="Cancelar">  
             </div>
-            <h3>Venta por paquete</h3>
+
+            <h3>Buscar - venta por paquete</h3>
             <div>
-            <div class="input-group">
-            <input type="text" class="form-control" placeholder="Buscar producto...">
-            <span class="input-group-btn">
-                        <button class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
-                      </span>
-        </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Descripcion</th>
-                    <th>Precio</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>------</td>
-                    <td>$------</td>
-                </tr>
-            </tbody>
-        </table>
+            <form action="" method="POST">
+                <div class="input-group">
+                    <input type="text" name="producto" class="form-control" placeholder="Buscar producto...">
+                    <span class="input-group-btn">
+                        <input class="btn btn-secondary" type="submit" <i class="fa fa-search" aria-hidden="true"></i>>
+                    </span>
+                </div>
+                <?php   
+                if(isset($_POST['producto']) && ($_POST["producto"]<>""))
+                {
+                $consulta = $_POST['producto'];
+                $sql = "SELECT * FROM producto WHERE descripcion LIKE '%$consulta%'";
+                $result = mysqli_query($conn,$sql);
+                  while($row = mysqli_fetch_array($result))
+                  {
+                    echo "<table class='table'>";
+                    echo "<tr>";
+                    echo "<td>" . $row['descripcion'] ."</td>";
+                    echo "<td>" .'$'. $row['venta'] ."</td>";
+                    echo $producto =  '<td class="control_detalles"><a href="../detalle_estudiante.php?codigo='.$row["id_producto"].'">
+                    <span> AGREGAR</span></a></td>';
+                    echo "";
+                    echo "</tr>";
+                    echo "</table>";
+                  }
+                }
+            ?>
+            </form>
             </div>
-        </div>
-        </div>
+            </div>
 
         <!--Detalles de las ventas registradas y hacer devoluciones-->
         <button type="button" id="ventaDia" class="btn btn-md" data-toggle="modal" data-target=".bd-ventas-lg">Ventas del día y Devoluciones</button>

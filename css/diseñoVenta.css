@@ -254,15 +254,26 @@ INFORMACION TOTAL PRODUCTOS Y COSTO
     text-align: center;
 }
 
-footer {
+#creditos {
     width: 100%;
-    background: #2e353d;
+    height: 90px;
     color: #FFF;
-    padding: .5em;
-    height: 50px;
+    background: #2e353d;
+    text-align: center;
+    margin-top: 1em;
 }
 
+#creditos #sistema {
+    font-size: 1em;
+    padding-top: .5em;
+}
 
+#creditos .fa {
+    color: #FFF;
+    font-size: 1.5em;
+    padding-right: .5rem;
+    margin: 0;
+}
 /*---------------------------------------------------------------*/
 
 .gral {

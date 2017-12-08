@@ -14,7 +14,7 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <title>clientesAdmin</title>
+    <title>clientes</title>
 </head>
 
 <body>

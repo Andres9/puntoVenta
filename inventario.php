@@ -18,7 +18,7 @@ if(!$_SESSION){header('Location: index.php');}
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
-    <title>inventarioAdmin</title>
+    <title>inventario</title>
 </head>
 
 <body>
